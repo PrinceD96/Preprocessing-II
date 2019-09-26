@@ -1,1 +1,20 @@
 // Navigation Styles here
+header {
+  border-bottom: 2px dashed @navigation-border;
+
+  nav {
+    .flex(flex-end, space-around, center);
+
+    h1 {
+      // margin-right: auto;
+      flex-grow: 1;
+    }
+    a {
+      // margin-left: auto;
+      line-height: 1.5;
+      font-size: 1.6rem;
+      padding: 35px 40px 35px 0;
+      color: @font-color;
+    }
+  }
+}
