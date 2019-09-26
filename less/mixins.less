@@ -1,1 +1,16 @@
 // Mixins in here
+.btn {
+  .flex(row nowrap, center, center);
+  width: 80%;
+  min-width: 48px;
+  height: 40px;
+  color: white;
+  background: teal;
+  border-radius: 12px;
+  font-size: 2rem;
+
+  &:hover {
+    cursor: pointer;
+    background: darken(teal, 5%);
+  }
+}
