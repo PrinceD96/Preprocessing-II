@@ -15,6 +15,15 @@
   cursor: pointer;
   background: #006667;
 }
+@media (max-width: 500px) {
+  .btn {
+    background: #26a2b5;
+  }
+  .btn:hover {
+    cursor: pointer;
+    background: #228fa0;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -155,7 +164,6 @@ html {
 html,
 body {
   font-family: 'Roboto', sans-serif;
-  font-weight: bold;
 }
 h1,
 h2,
@@ -189,12 +197,21 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
+    font-weight: normal;
+  }
+}
 header {
   border-bottom: 2px dashed #c0c0c0;
 }
+header h2 {
+  display: none;
+}
 header nav {
   display: flex;
-  flex-flow: flex-end;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -206,6 +223,24 @@ header nav a {
   font-size: 1.6rem;
   padding: 35px 40px 35px 0;
   color: #212529;
+}
+@media (max-width: 500px) {
+  header nav a {
+    padding: 0;
+  }
+  header nav h1 {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  header h2 {
+    display: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
 }
 .footer {
   width: 100%;
@@ -272,4 +307,50 @@ header nav a {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .content-section {
+    margin: 30px 0;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  .content-section .text-content {
+    min-width: 100%;
+    padding: 0;
+  }
+  .content-section .img-content {
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .content-section .img-content img {
+    border-radius: 10px;
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .inverse-content .text-content {
+    padding: 0;
+  }
+  .inverse-content .img-content {
+    padding: 0;
+  }
+  .inverse-content :nth-child(2) {
+    order: -1;
+  }
+  .content-destination {
+    min-width: 100%;
+    margin: 0 auto;
+  }
+  .content-pick {
+    padding-top: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-pick .destination {
+    min-width: 85%;
+    margin-bottom: 30px;
+  }
 }

@@ -1,9 +1,12 @@
 // Navigation Styles here
 header {
   border-bottom: 2px dashed @navigation-border;
+  h2 {
+    display: none;
+  }
 
   nav {
-    .flex(flex-end, space-around, center);
+    .flex(row wrap, space-around, center);
 
     h1 {
       // margin-right: auto;
@@ -15,6 +18,32 @@ header {
       font-size: 1.6rem;
       padding: 35px 40px 35px 0;
       color: @font-color;
+    }
+  }
+}
+
+@mobile: (max-width: 500px);
+header {
+  nav {
+    @media @mobile {
+      // border: 1px solid yellow;
+
+      // font-size: 1.2rem;
+
+      a {
+        padding: 0;
+      }
+
+      h1 {
+        display: none;
+      }
+    }
+  }
+  h2 {
+    @media @mobile {
+      display: initial;
+      .flex(row wrap, center, center);
+      padding: 10px 0;
     }
   }
 }
